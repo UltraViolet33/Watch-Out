@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 10px;
+    font-size: 22px;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header, footer, .main-content {
+    border: 1px solid black;
+
+}
+
+header > * {
+    display: none;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
+.navigation a, footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.mobile_menu,
+.logo,
+.maps {
+    display: block;
+}
+
+.watch-img {
+    width: 100vw;
+}
+
+
+footer ul {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items:center;
+}
+
+footer li {
+    list-style-type: none;
+}
+
+footer {
+    height: 10vh;
+}
+
+.img-container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    padding: 10px;
+}
+
+.images-preview {
+    display: none;
+}
+
+@media screen and (min-width:900px) {
+
+    header > * {
+        display: block;
+    }
+
+    .mobile_menu {
+        display: none;
+    }
+
+    .navigation li {
+        display: inline-block;
+        margin: 15px;
+    }
+
+    .images-preview {
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-preview-item {
+        border: 1px solid black;
+        flex: 1;
+        height: 100px;
+        max-width: 150px;
+    }
+
+    .main-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .main-content>div {
+        flex: 1;
+    }
+}
