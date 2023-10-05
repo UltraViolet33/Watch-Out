@@ -6,7 +6,7 @@
 
 header {
   padding: 10px;
-  font-size: 22px;
+  font-size: 15px;
   height: 10vh;
   display: flex;
   justify-content: space-between;
@@ -24,8 +24,8 @@ header > * {
 }
 
 .icon {
-  width: 50px;
-  height: 50px;
+  /* width: 50px; */
+  height: 40px;
   /* background-color: red; */
 }
 
@@ -52,6 +52,8 @@ footer a {
 footer ul {
   display: flex;
   height: 100%;
+  flex-direction: column;
+  gap: 5px;
   justify-content: space-around;
   align-items: center;
 }
@@ -61,7 +63,8 @@ footer li {
 }
 
 footer {
-  height: 10vh;
+  padding: 10px;
+  height: 15vh;
 }
 
 .img-container {
@@ -74,20 +77,26 @@ footer {
 .watch-image {
   object-fit: cover;
   overflow-x: hidden;
-
+  width: 100%;
   height: 100%;
 }
 
 .description {
-  padding: 10px;
-
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80vh;
   /* text-align: center; */
 }
 
-.watch-name{
-  text-align: center;
+.description-text {
+  text-align: justify;
 }
 
+.watch-name {
+  text-align: center;
+}
 
 .price {
   font-size: 24px;
@@ -100,10 +109,16 @@ footer {
 @media screen and (min-width: 900px) {
   header > * {
     display: block;
+    font-size: 18px;
   }
 
   .mobile_menu {
     display: none;
+  }
+
+  header a {
+    text-decoration: none;
+    color: black;
   }
 
   .navigation ul {
@@ -114,6 +129,14 @@ footer {
   .navigation li {
     display: inline-block;
     margin: 15px;
+  }
+
+  header a:hover {
+    text-decoration: underline;
+  }
+
+  #my-account:hover {
+    text-decoration: none;
   }
 
   .watch-image {
@@ -130,6 +153,7 @@ footer {
     flex: 1;
     height: 100px;
     object-fit: cover;
+    cursor: pointer;
     /* width: auto; */
     /* max-width: 150px; */
   }
@@ -152,7 +176,18 @@ footer {
 
   #maps-text {
     display: block;
-    
+  }
+
+  .description{
+    height: auto;
+  }
+
+  footer ul {
+    flex-direction: row;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
   }
 }
 
